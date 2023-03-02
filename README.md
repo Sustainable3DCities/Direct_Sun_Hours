@@ -80,6 +80,8 @@ The computed Direct Sun Hours for every point in the grid is presented in the Rh
 
 <br>
 <br>
+<br>
+<br>
 
 ## References:
 
@@ -87,9 +89,11 @@ EN 12665:2018, Light and lighting — Basic terms and criteria for specifying li
 <br>
 
 Ladybug Rhino Grasshopper plugins: https://www.ladybug.tools/ladybug.html#solaraccess
-<br>
-<br>
 
+<br>
+<br>
+<br>
+<br>
 
 
 ## License
