@@ -19,8 +19,22 @@ This folder includes ...
 - 3D city model including detailed building exterior information (equivalent to [CityGML LOD4](https://www.sciencedirect.com/science/article/pii/S0198971516300436?via%3Dihub)) like e.g. windows, balconies, balcony railings, etc. 
 
 <br>
+
+The below figure depicts a example of a 3D city model that can be used as input. The *target buildings* for whose windows we are going to compute the direct sun hours for are highlighted in yellow.
+
+<br>
 <p align="center"><img src="img/SE_study_area.PNG" width=70%></img></p>
 
+
+<br>
+<br>
+
+The next figure gives you the opportunity to get a closer look over the *target buildings*.
+
+<br>
+<br>
+
+<p align="center"><img src="img/target_buildibgs.PNG" width=70%></img></p>
 
 <br>
 <br>
