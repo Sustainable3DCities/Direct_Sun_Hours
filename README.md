@@ -19,7 +19,7 @@ This folder includes ...
 - 3D city model including detailed building exterior information (equivalent to [CityGML LOD4](https://www.sciencedirect.com/science/article/pii/S0198971516300436?via%3Dihub)) like e.g. windows, balconies, balcony railings, etc. 
 
 <br>
-<p align="center"><img src="img//building_model.PNG" width=70%></img></p>
+<p align="center"><img src="img/SE_study_area.PNG" width=70%></img></p>
 
 
 <br>
