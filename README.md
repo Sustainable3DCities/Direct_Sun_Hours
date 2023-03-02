@@ -29,7 +29,7 @@ The next figures give you the opportunity to get a closer look over the *target 
 <br>
 <br>
 
-<p align="center"><img src="img/target_buildings.PNG" width=40%></img>&emsp;<img src="img/target_buildings_2.PNG" width=50.2%></img></p>
+<p align="center"><img src="img/target_buildings.PNG" width=40%></img>&emsp;<img src="img/target_buildings_2.PNG" width=50.3%></img></p>
 
 <br>
 <br>
