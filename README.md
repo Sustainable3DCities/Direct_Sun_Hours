@@ -1,5 +1,5 @@
 # Direct Sun Hours
-The Grasshopper script-file included in this repository is used for computing the direct sun hours on windows and balcony doors of a set of buildings in a neighbourhood. Some of the buildings in the study area are represented in high level of detail (equivalent to CityGML LOD4), while others are represented in a lower level of detail (equivalent to CityGML LOD2). The goal is to examine how including or excluding obstructing gemmetries (e.g. balconies, balcony railings, etc.) of buildings represented in a high level of detail affect the results of daylight metric simulations such as the Sunlight Exposure (here expressed as direct sun hours).
+The Grasshopper script-file included in this repository is used for computing the direct sun hours on windows and balcony doors of a set of buildings in a neighbourhood. Some of the buildings in the study area are represented in high level of detail (equivalent to [CityGML LOD4](https://www.sciencedirect.com/science/article/pii/S0198971516300436?via%3Dihub)), while others are represented in a lower level of detail (equivalent to [CityGML LOD2](https://www.sciencedirect.com/science/article/pii/S0198971516300436?via%3Dihub)). The goal is to examine how including or excluding obstructing gemmetries (e.g. balconies, balcony railings, etc.) of buildings represented in a high level of detail affect the results of daylight metric simulations such as the Sunlight Exposure (here expressed as direct sun hours).
 
 <br>
 <br>
@@ -58,19 +58,7 @@ The process depicted in this workflow computes the mean & median Daylight Factor
 <ins><b>Step 7:</ins></b> Add a sensor grid (using the Climate Studio *SensorGrid* module) with 0.2m resolution and placed 0.8m above a room floor surface.<br><br>
 <ins><b>Step 8:</ins></b> Add a *Boolean Toggle* in combination with two *Cull Pattern* modules to control when balcony and balcony railing geometries are to be included as obstructions in the DF-computation and when not. <br><br>
 <ins><b>Step 9:</ins></b> Add Climate Studio *DaylightModel* to prepare the scene for running the DF daylight simulation.<br><br>
-<ins><b>Step 10:</ins></b> Add a Climate Studio *Daylight* module and select *Daylight Factor* as the chosen standard to run the corresponding daylight simulation.<br><br>
-<ins><b>Step 11:</ins></b> Add a *RUN-button* to control the execution of the DF-computation. <br><br>
-<ins><b>Step 12:</ins></b> Add a Climate Studio *CSR Result* module to capture the DF-values of the gridpoints and obtain the median and mean value. <br><br>
-<ins><b>Step 13:</ins></b> Add a Climate Studio *PreviewGrid* module to make the DF-value results visible in Rhino. <br><br>
-<ins><b>Step 14:</ins></b> Add a Climate Studio *Extract* sensor grid data module, to get the gridpoint DF-values. <br><br>
-<ins><b>Step 15:</ins></b> Add a *Multiplication* module to get the DF-values expressed as percentages instead of decimal values (e.g. 2.3% instead of 0.023)<br><br>
-<ins><b>Step 16:</ins></b> Add a *Bounds* module to obtain the min and max DF-values computed for the current execution. <br><br>
-<ins><b>Step 17:</ins></b> Add a *Larger* module to filter out gridpoints with DF-values lower than 1%. <br><br>
-<ins><b>Step 18:</ins></b> Add a *DeGrid* module to obtain the Sensor Areas of every grid. If we sum up all the sensor areas we get the total floor area of the room. <br><br> 
-<ins><b>Step 19:</ins></b> Add a *Cull* module and use the list of sensor points whose DF<1% and the list of sensor area per gridpoint as input to filter out the sensor areas of the gridpoints whose DF<1%. <br><br> 
-<ins><b>Step 20:</ins></b> Add a *MassAddition* module to sum uo the sensor areas of all gridpoints whose DF>=1%. <br><br> 
-<ins><b>Step 21:</ins></b> Add an *Area* module to compute the total floor area in m<sup>2</sup>.  <br><br>
-<ins><b>Step 22:</ins></b> Add a *Division* and a *Multiplication* module to compute the percentage floor area of the room that complies to the DF>=1% requirement. <br><br>
+<ins><b>Step 10:</ins></b> Add a Climate Studio *Daylight* module and select *Daylight Factor* as the chosen standard to run the corresponding daylight . <br><br>
 
 <img src="img/DSH_gh_flowchart.png"></img>
 
