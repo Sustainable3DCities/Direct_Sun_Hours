@@ -20,7 +20,7 @@ This folder includes ...
 
 <br>
 
-The below figure depicts a example of a 3D city model that can be used as input. The *target buildings* for whose windows we are going to compute the direct sun hours for are highlighted in yellow.
+The below figure depicts a example of a 3D city model that can be used as input. The windows of the *target buildings* for which we are going to compute the direct sun hours for, are highlighted in yellow.
 
 <br>
 <p align="center"><img src="img/SE_study_area.PNG" width=70%></img></p>
@@ -34,7 +34,7 @@ The next figure gives you the opportunity to get a closer look over the *target 
 <br>
 <br>
 
-<p align="center"><img src="img/target_buildibgs.PNG" width=70%></img></p>
+<p align="center"><img src="img/target_buildings.PNG" width=70%></img></p>
 
 <br>
 <br>
