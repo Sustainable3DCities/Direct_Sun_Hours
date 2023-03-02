@@ -78,10 +78,10 @@ The computed Daylight Factor for every point in the grid is presented in the Rhi
 
 ## References:
 
-
+EN 12665:2018, Light and lighting — Basic terms and criteria for specifying lighting requirements.
 <br>
 
-
+Ladybug Rhino Grasshopper plugins: https://www.ladybug.tools/ladybug.html#solaraccess
 <br>
 <br>
 
