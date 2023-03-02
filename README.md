@@ -10,7 +10,7 @@ This folder includes ...
 <br>
 <br>
 
-<p align="center"><img src="img//daylight_factor.png" width=70%></img></p>
+<p align="center"><img src="img/daylight_factor.png" width=70%></img></p>
 
 <br>
 <br>
@@ -34,7 +34,7 @@ The next figure gives you the opportunity to get a closer look over the *target 
 <br>
 <br>
 
-<p align="center"><img src="img/target_buildings.PNG" width=70%></img></p>
+<p align="center"><img src="img/target_buildings.PNG" width=40%></img></p>
 
 <br>
 <br>
@@ -77,7 +77,7 @@ The process depicted in this workflow computes the mean & median Daylight Factor
 <ins><b>Step 21:</ins></b> Add an *Area* module to compute the total floor area in m<sup>2</sup>.  <br><br>
 <ins><b>Step 22:</ins></b> Add a *Division* and a *Multiplication* module to compute the percentage floor area of the room that complies to the DF>=1% requirement. <br><br>
 
-<img src="img//DF_gh_flowchart.png"></img>
+<img src="img/DSH_gh_flowchart.png"></img>
 
 <br>
 <br>
