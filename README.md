@@ -86,7 +86,7 @@ The process depicted in this workflow computes the mean & median Daylight Factor
 ## Output:
 The computed Daylight Factor for every point in the grid is presented in the Rhino environment as a visual output while the corresponding mean and median DF-values along with the percentage of the room's floor area complying to the DF>=1% requirement are exported to a panel inside the Rhino Grasshopper environment.
 
-<p align="center"><img src="img//DF_output.PNG" width=30%></img></p>
+<p align="center"><img src="img//Direct_Solar_Hours_output.PNG" width=30%></img></p>
 
 <br>
 <br>
