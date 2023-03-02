@@ -74,7 +74,7 @@ The computed Direct Sun Hours for every point in the grid is presented in the Rh
 <br>
 <br>
 
-<p align="center"><img src="img//DSH_raw_output.PNG" width=70%></img></p>
+<p align="center"><img src="img//DSH_raw_output.png" width=70%></img></p>
 
 <br>
 <br>
