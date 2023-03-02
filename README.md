@@ -1,16 +1,11 @@
 # Direct Sun Hours
-This folder includes ...
+The Grasshopper script-file included in this repository is used for computing the direct sun hours on windows and balcony doors of a set of buildings in a neighbourhood. Some of the buildings in the study area are represented in high level of detail (equivalent to CityGML LOD4), while others are represented in a lower level of detail (equivalent to CityGML LOD2). The goal is to examine how including or excluding obstructing gemmetries (e.g. balconies, balcony railings, etc.) of buildings represented in a high level of detail affect the results of daylight metric simulations such as the Sunlight Exposure (here expressed as direct sun hours).
 
 <br>
 <br>
 
 ## Direct Sunlight Exposure (definition):
-
-
-<br>
-<br>
-
-<p align="center"><img src="img/daylight_factor.png" width=70%></img></p>
+Sunlight exposure is regulated by the Swedish Standard, which is based on the European Standard [EN 17037 - *Daylight in Buildings*](https://velcdn.azureedge.net/~/media/marketing/ee/professional/28mai2019%20seminar/veluxen17037tallinn28052019.pdf), and states that at minimum one room in an apartment has to receive at least 1.5 hours of direct sunlight on one day between February 1st and March 21st of a year.
 
 <br>
 <br>
