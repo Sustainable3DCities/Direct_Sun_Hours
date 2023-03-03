@@ -45,20 +45,20 @@ The next figures give you the opportunity to get a closer look over the *target 
 <br>
 
 ## Workflow:
-The process depicted in this workflow computes the Direct Sun Hour values calculated for March 21st (0.5 min temporal resolution) over a grid of points (0.1m resolution) placed over every window in the target buildings (see figure in *Input data* section). . Finally, this implementation also takes into consideration how using different building facade materials and colours affects daylight access.
+The process depicted in this workflow computes the Direct Sun Hour values calculated for March 21st (0.5 min temporal resolution) over a grid of points (0.1m resolution) placed over every window in the target buildings (see figure in *Input data* section). . Finally, this implementation also takes into consideration how including or excluding more detailed facade objects such as balconies and balcony railings affects daylight access (i.e., total hours of direct sunlight per grid point on March 21st). The position of the Sun during that time of the year is estimated based on the latitude for that particular area. The applied methodology is described in the following steps:
 
 <br>
 
-<ins><b>Step 1:</ins></b> Add the geometries (Geometry Pipeline) of the room (walls, ceiling, floor, windows, eaves) <br><br>
-<ins><b>Step 2:</ins></b> Add the geometries (Geometry Pipeline) of the obstructions (e.g. ground, building facades of surrounding buildings, balconies of surrounding buildings, balcony railings of surrounding buildings) <br><br>
-<ins><b>Step 3:</ins></b> Add a slider and a panel with the standard height value of a floor (2.79m). Include a multiplier to combine the slider and the floor height values to obtain the elevation coordinates (z-coord) of the different room-related geometries from floor to floor. <br><br>
-<ins><b>Step 4:</ins></b> Add one Climate Studio *LightingMaterial* module per obstructing geometry to pick an appropriate material and colour with specific spectral properties. <br><br>
-<ins><b>Step 5:</ins></b> Add one Climate Studio *LightingMaterial* module for every room-related geometry and pick an appropriate material and colour.<br><br>
-<ins><b>Step 6:</ins></b> Add a Climate Studio *SceneLayer* module to construct a Scene Layer for daylight simulation, one for every geometry.<br><br>
-<ins><b>Step 7:</ins></b> Add a sensor grid (using the Climate Studio *SensorGrid* module) with 0.2m resolution and placed 0.8m above a room floor surface.<br><br>
-<ins><b>Step 8:</ins></b> Add a *Boolean Toggle* in combination with two *Cull Pattern* modules to control when balcony and balcony railing geometries are to be included as obstructions in the DF-computation and when not. <br><br>
-<ins><b>Step 9:</ins></b> Add Climate Studio *DaylightModel* to prepare the scene for running the DF daylight simulation.<br><br>
-<ins><b>Step 10:</ins></b> Add a Climate Studio *Daylight* module and select *Daylight Factor* as the chosen standard to run the corresponding daylight . <br><br>
+<ins><b>Step 1:</ins></b> Get the latitude of your study area by first importing a Solemna weather data file over the closest location to the study area and the adding a Ladybug Import Location module. In this case, the study area is located in Malmö, Southern Sweden and the weather file for Copenhagen (Denmark) is is chosen as it is closest to this location. <br><br>
+<ins><b>Step 2:</ins></b>  <br><br>
+<ins><b>Step 3:</ins></b>  <br><br>
+<ins><b>Step 4:</ins></b>  <br><br>
+<ins><b>Step 5:</ins></b>  <br><br>
+<ins><b>Step 6:</ins></b>  <br><br>
+<ins><b>Step 7:</ins></b>  <br><br>
+<ins><b>Step 8:</ins></b>  <br><br>
+<ins><b>Step 9:</ins></b>  <br><br>
+<ins><b>Step 10:</ins></b> <br><br>
 
 <img src="img/DSH_gh_flowchart.png"></img>
 
