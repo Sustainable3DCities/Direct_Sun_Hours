@@ -50,9 +50,9 @@ The process depicted in this workflow computes the Direct Sun Hour values calcul
 <br>
 
 <ins><b>Step 1:</ins></b> Get the latitude of your study area by first importing a Solemna weather data file over the closest location to the study area and the adding a Ladybug Import Location module. In this case, the study area is located in Malmö, Southern Sweden and the weather file for Copenhagen (Denmark) is is chosen as it is closest to this location. <br><br>
-<ins><b>Step 2:</ins></b>  <br><br>
-<ins><b>Step 3:</ins></b>  <br><br>
-<ins><b>Step 4:</ins></b>  <br><br>
+<ins><b>Step 2:</ins></b> Set the time-related parameters of the simulation by adding a Ladybug *AnalysisPeriod* module. Define the start- and end-month (here March), the start- and end-day (here 21), the start- and end-hour of day (here 00:00 and 23:00 correspondingly), and the time interval (timestep) for the sampling (here 30 min - expressed in the module as 2 times per hour). <br><br>
+<ins><b>Step 3:</ins></b> Compute sunpath over current 3D scene for given time period and location using the Ladybug *Sunpath* module. <br><br>
+<ins><b>Step 4:</ins></b> Add geometries for objects whose surfaces will be used to estimate direct sunlight hours on, using the *Geometry Pipeline* module. Use *Merge* to merge their geometries to one. <br><br>
 <ins><b>Step 5:</ins></b>  <br><br>
 <ins><b>Step 6:</ins></b>  <br><br>
 <ins><b>Step 7:</ins></b>  <br><br>
