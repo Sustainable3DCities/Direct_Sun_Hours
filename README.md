@@ -84,6 +84,8 @@ The process depicted in this workflow computes the Direct Sun Hour values calcul
 <br>
 
 ## Output:
+
+### Rhinocerus (CAD-environment)
 The computed Direct Sun Hours for every point in the grid is presented in the Rhino environment as a visual output while the corresponding values along with the grid-point coordinates the refer to are exported to 2 panels inside the Rhino Grasshopper environment. The panel contents can be exported to txt-files and imported to GIS environments for further processing.
 
 <p align="center"><img src="img//Direct_Solar_Hours_output.PNG" width=30%></img></p>
@@ -94,6 +96,20 @@ The computed Direct Sun Hours for every point in the grid is presented in the Rh
 <br>
 
 <p align="center"><img src="img//DSH_output_raw.png" width=70%></img></p>
+
+<br>
+<br>
+<br>
+<br>
+
+### ArcGIS Pro (GIS-environment)
+
+<br>
+<br>
+<br>
+<br>
+
+<p align="center"><img src="img/" width=70%></img></p>
 
 <br>
 <br>
