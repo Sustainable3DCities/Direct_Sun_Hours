@@ -52,19 +52,36 @@ The process depicted in this workflow computes the Direct Sun Hour values calcul
 <ins><b>Step 1:</ins></b> Get the latitude of your study area by first importing a Solemna weather data file over the closest location to the study area and the adding a Ladybug Import Location module. In this case, the study area is located in Malmö, Southern Sweden and the weather file for Copenhagen (Denmark) is is chosen as it is closest to this location. <br><br>
 <ins><b>Step 2:</ins></b> Set the time-related parameters of the simulation by adding a Ladybug *AnalysisPeriod* module. Define the start- and end-month (here March), the start- and end-day (here 21), the start- and end-hour of day (here 00:00 and 23:00 correspondingly), and the time interval (timestep) for the sampling (here 30 min - expressed in the module as 2 times per hour). <br><br>
 <ins><b>Step 3:</ins></b> Compute sunpath over current 3D scene for given time period and location using the Ladybug *Sunpath* module. <br><br>
-<ins><b>Step 4:</ins></b> Add geometries for objects whose surfaces will be used to estimate direct sunlight hours on, using the *Geometry Pipeline* module. Use *Merge* to merge their geometries to one. <br><br>
-<ins><b>Step 5:</ins></b>  <br><br>
-<ins><b>Step 6:</ins></b>  <br><br>
-<ins><b>Step 7:</ins></b>  <br><br>
-<ins><b>Step 8:</ins></b>  <br><br>
-<ins><b>Step 9:</ins></b>  <br><br>
-<ins><b>Step 10:</ins></b> <br><br>
+<ins><b>Step 4:</ins></b> Add geometries for objects whose surfaces will be used to estimate direct sunlight hours on (e.g. windows, glazed balcony doors, etc.), using the *Geometry Pipeline* module. Use *Merge* to merge their geometries to one. <br><br>
+<ins><b>Step 5:</ins></b> Add the geometries of objects that will be used as sunlight obstructing surfaces (e.g. all buildings in the study area - including the building parts of the *target buildings* (e.g. facade surfaces, roof surfaces, balconies and balcony railings)) using the *Geometry Pipeline* module. Use *Merge* to merge their geometries to one. <br><br>
+<ins><b>Step 6:</ins></b> Use the Ladybug *DirectSunHours* module to compute the total sum of direct sunlight hours incident on the gridpoints (0.1m resolution) placed over windows and balcony doors for the 21st of March (from 00:00 - 23:00) at a latitude close to Copenhagen, Denmark from sunpaths created using an 30-min interval. <br><br>
+<ins><b>Step 7:</ins></b> Add a Ladybug *LegegendPar* module (i.e., legend parameters) to include a legend to the output where the min and max values are set to 0.0 and 12.0 correspondingly (as dates close to the 21st of March correspond to the vernal equinox in the Northern Hemisphere when night and day have the same length). <br><br>
+<ins><b>Step 8:</ins></b> Add a *Toggle* to control when you wish the script to be executed (*True*: the script executes & *False*: the script does <u>not</u> execute.). <br><br>
+<ins><b>Step 9:</ins></b> Add a *Size* operation to set the size of the displayed points in the point-grid. <br><br>
+<ins><b>Step 10:</ins></b> Add 2 *Panels*; one to store the coordinates (x:latitude, y:longitude, z:elevation) for every grid-point, and another to store the corresponding direct sunlight hours every gridpoint receives during the 21st of March. Observe that both panels maintain the same gridpoint ID (i.e. row ID). <br><br>
 
 <img src="img/DSH_gh_flowchart2.png"></img>
 
 <br>
 <br>
 
+<ins><b>Step 11:</ins></b>In order to obtain the total direct sunlight hours for a room that is frequently visited following the requirements of the European daylight directive (stating that this should be measured at a 30cm height above the windows lower frame), you may:
+- export the aforementioned panels to a txt.
+- import the txt-file with the gridpoint coordinates as lat/lon to a GIS software (e.g. ESRI ArcGIS Pro, QGIS). 
+- *Project* the imported gridpoint file to a suitable *Projected Coordinate System* and define a *Vertical Coordinate System*. In this case, the chosen Projected Coordinate System was SWEREF99 13 30 ([EPSG:3008](https://epsg.io/3008)) and the Vertical Coordinate System was [RH2000](https://www.lantmateriet.se/en/geodata/gps-geodesi-och-swepos/reference-systems/height-systems/swedish-height-systems/RH-2000/). 
+- Import the txt-file with the direct sunlight hours per gridpoint as a simple table to the GIS software.
+- Join the attribute table of the coordinate-file with the results-file based on the row-ID (same as gridpoint ID).
+- Export the window and glazed balcony door geometries from Rhino as OGC KML files. You may export all layers in your 3D Scene. 
+- Use [FME](https://www.safe.com/) to convert the exported KML file to a multipatch Shapefile (which can be read by ArcGIS Pro). The FME-script is available in this repository under the *code* folder.
+- Import the produced Shapefiles with the window & glazed balcony doors to a *Local Scene* in ArcGIS Pro.
+- Compute the window centroid for every window or glazed balcony door using the ArcPy code stored under the *code* folder of this repository. 
+- Use the *[Near 3D](https://pro.arcgis.com/en/pro-app/latest/tool-reference/3d-analyst/near-3d.htm)* tool included in ESRI ArcGIS Pro's 3D Analyst toolbox to define the gridpoint closest to the window centroid point. 
+- Set the value of the gridpoint closest to the aperture centroid (window or galzed balcony door) centroid as the number of direct sunlight hours for that aperture. 
+
+<br>
+<br>
+<br>
+<br>
 
 ## Output:
 The computed Direct Sun Hours for every point in the grid is presented in the Rhino environment as a visual output while the corresponding values along with the grid-point coordinates the refer to are exported to 2 panels inside the Rhino Grasshopper environment. The panel contents can be exported to txt-files and imported to GIS environments for further processing.
