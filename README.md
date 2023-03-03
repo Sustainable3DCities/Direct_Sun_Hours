@@ -84,7 +84,7 @@ The process depicted in this workflow computes the Direct Sun Hour values calcul
 
 <br><br>
 
-<img src="img/window_centroid_arcpy_flowchart.png"></img>
+<img src="img/window_centroid_arcpy_flowchart.png" width=70%></img>
 
 <br>
 <br>
@@ -117,7 +117,7 @@ The computed Direct Sun Hours for every point in the grid is presented in the Rh
 <br>
 
 ### ArcGIS Pro (GIS-environment)
-
+The computed direct sunlight hours imported to ESRI ArcGIS Pro and visualized using an appropriate colormap according making it easy to distinguish which rooms might fail to meet the 1.5 hour direct sunlight requirement of the European Daylight Standard recommendation.
 <br>
 <br>
 <br>
