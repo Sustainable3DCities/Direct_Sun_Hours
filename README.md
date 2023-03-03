@@ -60,7 +60,7 @@ The process depicted in this workflow computes the Direct Sun Hour values calcul
 <ins><b>Step 9:</ins></b>  <br><br>
 <ins><b>Step 10:</ins></b> <br><br>
 
-<img src="img/DSH_gh_flowchart.png"></img>
+<img src="img/DSH_gh_flowchart2.png"></img>
 
 <br>
 <br>
