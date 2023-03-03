@@ -73,8 +73,22 @@ The process depicted in this workflow computes the Direct Sun Hour values calcul
 - Join the attribute table of the coordinate-file with the results-file based on the row-ID (same as gridpoint ID).
 - Export the window and glazed balcony door geometries from Rhino as OGC KML files. You may export all layers in your 3D Scene. 
 - Use [FME](https://www.safe.com/) to convert the exported KML file to a multipatch Shapefile (which can be read by ArcGIS Pro). The FME-script is available in this repository under the *code* folder.
+<br><br>
+
+<img src="img/FME-script.PNG"></img>
+
+<br>
+<br>
 - Import the produced Shapefiles with the window & glazed balcony doors to a *Local Scene* in ArcGIS Pro.
 - Compute the window centroid for every window or glazed balcony door using the ArcPy code stored under the *code* folder of this repository. 
+
+<br><br>
+
+<img src="img/window_centroid_arcpy_flowchart.png"></img>
+
+<br>
+<br>
+
 - Use the *[Near 3D](https://pro.arcgis.com/en/pro-app/latest/tool-reference/3d-analyst/near-3d.htm)* tool included in ESRI ArcGIS Pro's 3D Analyst toolbox to define the gridpoint closest to the window centroid point. 
 - Set the value of the gridpoint closest to the aperture centroid (window or galzed balcony door) centroid as the number of direct sunlight hours for that aperture. 
 
@@ -109,7 +123,7 @@ The computed Direct Sun Hours for every point in the grid is presented in the Rh
 <br>
 <br>
 
-<p align="center"><img src="img/" width=70%></img></p>
+<p align="center"><img src="img/DSH_ESRI_output.png" width=70%></img></p>
 
 <br>
 <br>
