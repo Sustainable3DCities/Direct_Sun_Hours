@@ -60,7 +60,7 @@ The process depicted in this workflow computes the Direct Sun Hour values calcul
 <ins><b>Step 9:</ins></b> Add a *Size* operation to set the size of the displayed points in the point-grid. <br><br>
 <ins><b>Step 10:</ins></b> Add 2 *Panels*; one to store the coordinates (x:latitude, y:longitude, z:elevation) for every grid-point, and another to store the corresponding direct sunlight hours every gridpoint receives during the 21st of March. Observe that both panels maintain the same gridpoint ID (i.e. row ID). <br><br>
 
-<img src="img/DSH_gh_flowchart2.png"></img>
+<p align="center"><img src="img/DSH_gh_flowchart2.png"></img></p>
 
 <br>
 <br>
@@ -84,7 +84,7 @@ The process depicted in this workflow computes the Direct Sun Hour values calcul
 
 <br><br>
 
-<img src="img/window_centroid_arcpy_flowchart.png" width=70%></img>
+<img src="img/window_centroid_arcpy_flowchart2.png" width=70%></img>
 
 <br>
 <br>
