@@ -123,7 +123,7 @@ The computed direct sunlight hours imported to ESRI ArcGIS Pro and visualized us
 <br>
 <br>
 
-<p align="center"><img src="img/DSH_ESRI_output.png" width=70%></img></p>
+<p align="center"><img src="img/DSH_ESRI_output2.png" width=70%></img></p>
 
 <br>
 <br>
